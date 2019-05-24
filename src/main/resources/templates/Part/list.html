@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Parts</title>
+</head>
+<body>
+<section>
+    <h2 >Parts list</h2>
+    <div>
+        <div th:each="p : ${Parts}">
+            <a th:href="${p.id}" th:text="${p.name}">Part name</a>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

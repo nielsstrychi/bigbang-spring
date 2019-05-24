@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Person detail title here</title>
+</head>
+<body>
+<section>
+    <h2>Part/Role</h2><h2 th:text="${Part.serieDto.name}"></h2>
+    <div th:if="${Part}">
+        <div th:text="${Part.name}">Person name</div>
+
+        <div th:text="${Part.bio}">Person name</div>
+
+        <div>Actor <a th:href="@{'/person/'+${Part.personDto.id}}" th:text="${Part.personDto.actorName}"></a>
+            plays as <div th:text="${Part.personDto.characterName}"></div> in the serie
+            <div><a th:href="@{'/serie/'+${Part.serieDto.id}}" th:text="${Part.serieDto.name}"></a></div>
+        </div>
+
+
+    </div>
+    <div th:unless="${Part}">
+        Part is not found
+    </div>
+
+</section>
+
+</body>
+</html>

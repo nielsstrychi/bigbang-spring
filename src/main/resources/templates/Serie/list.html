@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Serie</title>
+</head>
+<body>
+<section>
+    <h2>Serie list</h2>
+    <div>
+        <div th:each="s : ${Series}">
+            <a th:href="${s.id}" th:text="${s.name}">Serie name</a>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

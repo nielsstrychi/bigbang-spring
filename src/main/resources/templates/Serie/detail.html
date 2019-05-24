@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Person detail title here</title>
+</head>
+<body>
+<section>
+    <h2>Person detail title here</h2>
+    <div th:if="${Serie}">name
+        <div th:text="${Serie.name}">Person name</div>season start
+        <div th:text="${Serie.startSeason}"></div>season end
+        <div th:text="${Serie.endSeason}"></div>
+    </div>
+    <div th:unless="${Serie}">
+        Season is not found
+    </div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Person detail</title>
+</head>
+<body>
+<section>
+    <h2>Person detail</h2>
+    <div class="person person_detail" th:if="${person}">
+        <div th:text="${person.actorName}">Person name</div>
+        <div><a th:href="@{'/'+${person.actorURL}}" target="_blank">To personal website</a></div>
+    </div>
+    <div th:unless="${person}">
+        Person not found
+    </div>
+
+</section>
+
+</body>
+</html>

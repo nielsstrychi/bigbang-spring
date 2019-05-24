@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Person list</title>
+</head>
+<body>
+<section>
+    <h2>Person list</h2>
+    <div>
+        <div th:each="p : ${persons}">
+            <a th:href="${p.id}" th:text="${p.actorName}">Person name</a>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
